@@ -1,0 +1,46 @@
+{
+  "name": "chatgpt-mascot",
+  "version": "1.0.0",
+  "description": "Floating ChatGPT Desktop Mascot",
+  "main": "main.js",
+  "author": "Sagar",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build:mac": "electron-builder --mac",
+    "build:mac:arm": "electron-builder --mac --arm64",
+    "build:mac:intel": "electron-builder --mac --x64",
+    "build:mac:universal": "electron-builder --mac --universal",
+    "build:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.desktop.chatgptmascot",
+    "productName": "ChatGPT Mascot",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "style.css",
+      "renderer.js",
+      "assets/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "identity": null
+    },
+    "win": {
+      "target": "portable"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>ChatGPT Desktop Mascot</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+<body>
+
+  <main class="mascot-container">
+
+    <!-- Drag handle -->
+    <div
+      class="mascot-drag-handle"
+      title="Drag to move mascot"
+    ></div>
+
+    <!-- Mascot -->
+    <button
+      type="button"
+      class="mascot-button"
+      id="mascotButton"
+      aria-label="Open ChatGPT"
+      title="Open ChatGPT"
+    >
+
+      <img
+        src="assets/mascot.png"
+        alt=""
+        draggable="false"
+      >
+
+    </button>
+
+  </main>
+
+  <script src="renderer.js"></script>
+
+</body>
+
+</html>
